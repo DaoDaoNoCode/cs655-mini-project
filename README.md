@@ -10,6 +10,8 @@ BU CS 655 Networking GENI Mini Project
 </br>
 
 #### 1.2 Install & Run Apache Traffic Server in the cache server
-#### 1) login in the cache server ```ssh username@cache_server_up```
-#### 2) updte apt-get ```sudo apt-get update```
-#### 3)
+##### 1) login in the cache server ```ssh username@cache_server_up```
+##### 2) update apt-get ```sudo apt-get update```
+##### 3) instal ATS ```sudo apt-get install trafficservice```
+##### 4) Modify records.config to open reverse_proxy & cache
+
