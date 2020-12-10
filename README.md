@@ -102,7 +102,38 @@ sudo vim apache2.conf
 Add the following content to apache2.conf:
 ```
 <FilesMatch "\.(htm|html|ico|pdf|flv|jpg|jpeg|png|gif|woff|js|css|swf)$">
-        Header set Cache-Control "max-age=[your_max_age_value]"
+        Header set Cache-Control "max-age=600"
+</FilesMatch>
+```
+
+Restart apache2
+```
+sudo service apache2 restart
+```
+
+### Add expires in http objects sent by the source server
+Login in the source server
+
+```
+ssh [your_username]@[your_source_server_ip]
+```
+
+Open expires_module
+```
+sudo a2enmod expires
+```
+
+Modify apache2.conf
+```
+cd /etc/apache2
+sudo vim apache2.conf
+```
+
+Add the following content to apache2.conf:
+```
+<FilesMatch "\.(htm|html|ico|pdf|flv|jpg|jpeg|png|gif|woff|js|css|swf)$">
+        ExpiresActive on
+        ExpiresDefault "access plus 10 minutes"
 </FilesMatch>
 ```
 
