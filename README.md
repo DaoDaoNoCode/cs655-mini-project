@@ -4,6 +4,7 @@ BU CS 655 Networking GENI Mini Project
 ## Correction
 In 3.1 of the report we submit in the GradeScope, we mistakenly write old commands that are used to test connectivity.
 ![old](/image/old.png)
+</br>
 Actually, we use an 87MB video to test the performance, and we use the following commands: 
 ![new](/image/new.png)
 
