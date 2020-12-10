@@ -5,25 +5,25 @@ BU CS 655 Networking GENI Mini Project
 
 ### Install & Run Apache2 in the source server
 
-login in the source server
+Login in the source server
 
 ```
 ssh [your_username]@[your_source_server_ip]
 ```
 
-update apt-get
+Update apt-get
 
 ```
 sudo apt-get update
 ```
 
-install apache2
+Install apache2
 
 ```
 sudo apt-get install apache2
 ```
 
-run apache2
+Run apache2
 
 ```
 sudo service apache2
@@ -31,19 +31,19 @@ sudo service apache2
 
 ### Install & Run Apache Traffic Server in the cache server
 
-login in the cache server
+Login in the cache server
 
 ```
 ssh [your_username]@[your_cache_server_ip]
 ```
 
-update apt-get
+Update apt-get
 
 ```
 sudo apt-get update
 ```
 
-install ATS
+Install ATS
 
 ```
 sudo apt-get install trafficservice
@@ -65,22 +65,51 @@ CONFIG proxy.config.url_remap.pristine_host_hdr INT 1
 CONFIG proxy.config.http.server_ports STRING 80 80:ipv6
 ```
 
-open remap.config
+Modify remap.config
 ```
 sudo vim remap.config
 ```
 
-add the following rule to the remap.config
+Add the following rule to the remap.config
 ```
 map http://[your_cache_server_ip]/cache/ http://{cache}
 map http://[your_cache_server_ip]/ http://[your_source_sever_ip]
 ```
 
-run ATS
+Run ATS
 ```
 sudo service trafficserver start
 ```
 
+### Add max-age in http objects sent by the source server
+Login in the source server
+
+```
+ssh [your_username]@[your_source_server_ip]
+```
+
+Open headers_module
+```
+sudo a2enmod headers
+```
+
+Modify apache2.conf
+```
+cd /etc/apache2
+sudo vim apache2.conf
+```
+
+Add the following content to apache2.conf:
+```
+<FilesMatch "\.(htm|html|ico|pdf|flv|jpg|jpeg|png|gif|woff|js|css|swf)$">
+        Header set Cache-Control "max-age=[your_max_age_value]"
+</FilesMatch>
+```
+
+Restart apache2
+```
+sudo service apache2 restart
+```
 
 
 
