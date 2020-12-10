@@ -56,5 +56,34 @@ cd /etc/trafficservice
 sudo vim records.config
 ```
 
+Within the records.config configuration file, ensure that the following settings have been configured as shown below:
+```
+CONFIG proxy.config.http.cache.http INT 1
+CONFIG proxy.config.reverse_proxy.enabled INT 1
+CONFIG proxy.config.url_remap.remap_required INT 1
+CONFIG proxy.config.url_remap.pristine_host_hdr INT 1
+CONFIG proxy.config.http.server_ports STRING 80 80:ipv6
+```
+
+open remap.config
+```
+sudo vim remap.config
+```
+
+add the following rule to the remap.config
+```
+map http://[your_cache_server_ip]/cache/ http://{cache}
+map http://[your_cache_server_ip]/ http://[your_source_sever_ip]
+```
+
+run ATS
+```
+sudo service trafficserver start
+```
+
+
+
+
+
 
           
