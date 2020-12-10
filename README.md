@@ -142,6 +142,18 @@ Restart apache2
 sudo service apache2 restart
 ```
 
+## How to check the objects in the cache:
+After setting up ATS, you can go to this link below:
+
+```
+[public_ip_address_of_ATS]/cache
+```
+
+## Send request to server side:
+```
+curl [public_ip_address_of_ATS]/filename
+```
+
 
 
 
