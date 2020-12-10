@@ -34,7 +34,7 @@ sudo service apache2
 login in the cache server
 
 ```
-ssh [your_username]@[your_cache_server_up]
+ssh [your_username]@[your_cache_server_ip]
 ```
 
 update apt-get
