@@ -14,4 +14,7 @@ BU CS 655 Networking GENI Mini Project
 ##### 2) update apt-get ```sudo apt-get update```
 ##### 3) instal ATS ```sudo apt-get install trafficservice```
 ##### 4) Modify records.config to open reverse_proxy & cache
-
+###### 4.1) ```cd /etc/trafficservice```
+###### 4.2) ```sudo vim records.config```
+###### 4.3)
+          
