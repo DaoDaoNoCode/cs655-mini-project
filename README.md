@@ -7,7 +7,7 @@ BU CS 655 Networking GENI Mini Project
 ##### 2) update the apt-get ```sudo apt-get update ```
 ##### 2) install apache2```sudo apt-get install apache2```
 ##### 3) run apache2 ```sudo service apache2``` 
-
+</br>
 
 #### 1.2 Install & Run Apache Traffic Server in the cache server
 #### 1) login in the cache server
