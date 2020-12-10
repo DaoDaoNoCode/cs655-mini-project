@@ -154,6 +154,12 @@ After setting up ATS, you can go to this link below:
 curl [your_cache_server_ip]/filename
 ```
 
+Get the response time:
+```
+curl 'Total: %{time_total}s\n' [your_cache_server_ip]/filename
+```
+
+
 
 
 
