@@ -1,0 +1,56 @@
+<rspec xmlns="http://www.geni.net/resources/rspec/3" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" xmlns:tour="http://www.protogeni.net/resources/rspec/ext/apt-tour/1" xmlns:jacks="http://www.protogeni.net/resources/rspec/ext/jacks/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.geni.net/resources/rspec/3    http://www.geni.net/resources/rspec/3/request.xsd" type="request">
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="Client" component_manager_id="urn:publicid:IDN+bbn.instageni.net+authority+cm" component_id="urn:publicid:IDN+bbn.instageni.net+node+pc5" sliver_id="urn:publicid:IDN+bbn.instageni.net+sliver+33445" exclusive="false">
+    <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/VM-noTxt-centered.svg"/>
+    <routable_control_ip xmlns="http://www.protogeni.net/resources/rspec/ext/emulab/1"/>
+    <sliver_type name="default-vm"/>
+    <services>
+      <emulab:imageable available="true"/>
+      <login authentication="ssh-keys" hostname="pcvm5-1.bbn.instageni.net" port="22" username="juntaow"/>
+      <login authentication="ssh-keys" hostname="pcvm5-1.bbn.instageni.net" port="22" username="dingtian"/>
+      <login authentication="ssh-keys" hostname="pcvm5-1.bbn.instageni.net" port="22" username="matta"/>
+      <login authentication="ssh-keys" hostname="pcvm5-1.bbn.instageni.net" port="22" username="tolik"/>
+      <login authentication="ssh-keys" hostname="pcvm5-1.bbn.instageni.net" port="22" username="yffang"/>
+      <login authentication="ssh-keys" hostname="pcvm5-1.bbn.instageni.net" port="22" username="buyssong"/>
+      <emulab:console server="vhost3.shared-nodes.emulab-ops.bbn.instageni.net"/>
+    </services>
+    <emulab:vnode name="pcvm5-1" hardware_type="pcvm"/>
+    <host name="Client.Mini-Project.ch-geni-net.bbn.instageni.net" ipv4="192.1.242.154"/>
+  </node>
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="ATS" component_manager_id="urn:publicid:IDN+bbn.instageni.net+authority+cm" component_id="urn:publicid:IDN+bbn.instageni.net+node+pc4" sliver_id="urn:publicid:IDN+bbn.instageni.net+sliver+33446" exclusive="false">
+    <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/VM-noTxt-centered.svg"/>
+    <routable_control_ip xmlns="http://www.protogeni.net/resources/rspec/ext/emulab/1"/>
+    <sliver_type name="default-vm"/>
+    <services>
+      <emulab:imageable available="true"/>
+      <login authentication="ssh-keys" hostname="pcvm4-8.bbn.instageni.net" port="22" username="juntaow"/>
+      <login authentication="ssh-keys" hostname="pcvm4-8.bbn.instageni.net" port="22" username="dingtian"/>
+      <login authentication="ssh-keys" hostname="pcvm4-8.bbn.instageni.net" port="22" username="matta"/>
+      <login authentication="ssh-keys" hostname="pcvm4-8.bbn.instageni.net" port="22" username="tolik"/>
+      <login authentication="ssh-keys" hostname="pcvm4-8.bbn.instageni.net" port="22" username="yffang"/>
+      <login authentication="ssh-keys" hostname="pcvm4-8.bbn.instageni.net" port="22" username="buyssong"/>
+      <emulab:console server="vhost2.shared-nodes.emulab-ops.bbn.instageni.net"/>
+    </services>
+    <emulab:vnode name="pcvm4-8" hardware_type="pcvm"/>
+    <host name="ATS.Mini-Project.ch-geni-net.bbn.instageni.net" ipv4="192.1.242.153"/>
+  </node>
+  <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="Server" component_manager_id="urn:publicid:IDN+instageni.idre.ucla.edu+authority+cm" component_id="urn:publicid:IDN+instageni.idre.ucla.edu+node+pc2" sliver_id="urn:publicid:IDN+instageni.idre.ucla.edu+sliver+48591" exclusive="false">
+    <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/VM-noTxt-centered.svg"/>
+    <routable_control_ip xmlns="http://www.protogeni.net/resources/rspec/ext/emulab/1"/>
+    <sliver_type name="default-vm"/>
+    <services>
+      <emulab:imageable available="true"/>
+      <login authentication="ssh-keys" hostname="pcvm2-42.instageni.idre.ucla.edu" port="22" username="juntaow"/>
+      <login authentication="ssh-keys" hostname="pcvm2-42.instageni.idre.ucla.edu" port="22" username="dingtian"/>
+      <login authentication="ssh-keys" hostname="pcvm2-42.instageni.idre.ucla.edu" port="22" username="matta"/>
+      <login authentication="ssh-keys" hostname="pcvm2-42.instageni.idre.ucla.edu" port="22" username="tolik"/>
+      <login authentication="ssh-keys" hostname="pcvm2-42.instageni.idre.ucla.edu" port="22" username="yffang"/>
+      <login authentication="ssh-keys" hostname="pcvm2-42.instageni.idre.ucla.edu" port="22" username="buyssong"/>
+      <emulab:console server="vhost2.shared-nodes.emulab-ops.instageni.idre.ucla.edu"/>
+    </services>
+    <emulab:vnode name="pcvm2-42" hardware_type="pcvm"/>
+    <host name="Server.Mini-Project.ch-geni-net.instageni.idre.ucla.edu" ipv4="164.67.126.36"/>
+  </node>
+  <rs:site_info xmlns:rs="http://www.protogeni.net/resources/rspec/ext/site-info/1">
+    <rs:location country="" latitude="34.069444" longitude="-118.443056"/>
+  </rs:site_info>
+</rspec>
