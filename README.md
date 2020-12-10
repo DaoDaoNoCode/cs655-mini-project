@@ -1,6 +1,12 @@
 # cs655-mini-project
 BU CS 655 Networking GENI Mini Project
 
+## Correction
+In 3.1 of the report we submit in the GradeScope, we mistakenly write old commands that are used to test connectivity.
+![old](/image/old.png)
+Actually, we use an 87MB video to test the performance, and we use the following commands: 
+![new](/image/new.png)
+
 ## Set up the environment
 
 ### Install & Run Apache2 in the source server
