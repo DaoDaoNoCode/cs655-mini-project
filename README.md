@@ -160,6 +160,10 @@ curl [your_cache_server_ip]/[filename]
 curl -o [filename] -w 'Total: %{time_total}s\n' [your_cache_server_ip]/[filename]
 ```
 
+### show detailed information of the response
+```
+curl -i -s [your_cache_server_ip]/[filename]
+```
 
 
 
